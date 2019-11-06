@@ -1,3 +1,7 @@
+body {
+    background-image: url()
+}
+
 .p {
     color: aqua;
 
@@ -7,4 +11,8 @@ h1 {
     text-align: left;
     font-family: 'Supermercado One', cursive;
 
+}
+
+.page-next {
+    text-align: center;
 }
