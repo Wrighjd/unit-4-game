@@ -1,5 +1,6 @@
 body {
-    background-image: url()
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 .p {
@@ -8,11 +9,17 @@ body {
 }
 
 h1 {
-    text-align: left;
+    text-align: center;
     font-family: 'Supermercado One', cursive;
+    font-size: 40px;
 
 }
 
 .page-next {
     text-align: center;
+}
+
+.crystals {
+    width: 80px;
+    height: 100px;
 }
