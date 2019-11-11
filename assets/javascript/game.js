@@ -59,3 +59,17 @@ const CrystalCollector = function() {
     function displayCurrentSum() {
         $("#currentSum").text(currentSum);
     }
+
+    this.updatePage = function(changeBy) {
+        currentPage = (currentPage + changeBy + numPages) % numPages;
+
+        displayCurrentPage();
+    }
+
+    function updateNumWins(changeBy) {
+        numWins += changeBy;
+    }
+
+    function updateNumLosses(changeBy) {
+        numLosses += changeBy;
+    }
