@@ -17,24 +17,24 @@
 
     <body>
             <div class="container">
-                    <h1>Infinity stone Collector</h1>
+                    <h1>Infinity stone Collector</h1><br></br>
         
-                    <div class="page_prev">
-                        <h2>Directions:</h2>
+                    <div class="page">
+                        <h2>Directions</h2>
                         
                         <p>There are 6 stones, each worth a certain amount of power.</p>
                         <p>Find out the value of each to hit the target power sum!</p>
         
                         <div class="page_next">Start:</div>
                     </div>
-                    <div class="page">
+                    <div class="gamestats">
                             <div id="userStats">
                                 <p>Wins: <strong><span id="numWins"></span></strong></p>
                                 <p>Losses: <strong><span id="numLosses"></span></strong></p>
                             </div>
             
-                            <p>Collect a power of <span id="targetSum"></span>!</p>
-                            <p>Your total power is <strong><span id="currentSum"></span></strong>.</p>
+                            <p>Collect a power of: <span id="targetSum"></span>!</p>
+                            <p>Your total power is: <strong><span id="currentSum"></span></strong>.</p>
 
                             <div class="clearfix">
                                     <img class="crystals" src="assets/images/SoulStone.png" alt="orange crystal" name="Soul Stone">
@@ -47,6 +47,12 @@
                             
                         </div> 
                    
+                </div>
+
+                <div id="lightBox_background"></div>
+
+                <div id="lightBox" class="container">
+                    <p id="outputMessage"></p>
                 </div>
     </body>
     </html>
