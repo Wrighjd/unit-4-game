@@ -23,3 +23,18 @@ const CrystalCollector = function() {
            
             targetSum += randomInteger(1, 6) * crystalValues[i];
         }
+
+        while (targetSum < 19 || targetSum > 120) {
+            targetSum = 0;
+
+            for (let i = 0; i < numCrystals; i++) {
+                targetSum += randomInteger(1, 6) * crystalValues[i];
+            }
+        }
+
+        displayCurrentPage();
+        displayNumWins();
+        displayNumLosses();
+        displayTargetSum();
+        displayCurrentSum();
+    }
