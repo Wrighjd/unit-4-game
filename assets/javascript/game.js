@@ -3,7 +3,7 @@ const CrystalCollector = function() {
     const numPages      = $(".page").length;
     let   currentPage   = 0;
     
-    const numCrystals   = 4;
+    const numCrystals   = 6;
     let   crystalValues = new Array(numCrystals);
     
     
@@ -91,25 +91,14 @@ const CrystalCollector = function() {
             updateNumWins(1);
 
             $("#outputMessage").html("You've saved the universe!!<br>Click anywhere to continue.");
-            $("#lightBox").css({
-                "animation-name"  : "slide_down",
-                "background-color": "var(--color-mint-green)"
-            });
-
-            this.displayLightBox(true);
-            
+                             
             this.startNewGame();
 
         } else {
             updateNumLosses(1);
 
             $("#outputMessage").html("Thanos has caused the 'Snap'!<br>Click anywhere to continue.");
-            $("#lightBox").css({
-                "animation-name"  : "shake",
-                "background-color": "var(--color-danger-red)"
-            });
-
-            this.displayLightBox(true);
+            
             
             this.startNewGame();
 
@@ -123,3 +112,17 @@ $(document).ready(function() {
     game = new CrystalCollector();
 
     game.startNewGame();
+
+    $(".page_prev").on("click", function() {
+        game.updatePage(-1);
+    });
+
+    $(".page_next").on("click", function() {
+        game.updatePage(1);
+    });
+
+    $(".crystals").on("click", function() {
+        game.collectCrystal($(".crystals").index(this));
+    });
+
+});
