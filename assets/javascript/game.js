@@ -73,3 +73,46 @@ const CrystalCollector = function() {
     function updateNumLosses(changeBy) {
         numLosses += changeBy;
     }
+
+    function randomInteger(a, b) {
+        return Math.floor((b - a + 1) * Math.random()) + a;
+    }
+    
+    this.collectCrystal = function(index) {
+    
+        currentSum += crystalValues[index];
+
+        displayCurrentSum();
+
+        if (currentSum < targetSum) {
+            return;
+
+        } else if (currentSum === targetSum) {
+            updateNumWins(1);
+
+            $("#outputMessage").html("You've saved the universe!!<br>Click anywhere to continue.");
+            $("#lightBox").css({
+                "animation-name"  : "slide_down",
+                "background-color": "var(--color-mint-green)"
+            });
+
+            this.displayLightBox(true);
+            
+            this.startNewGame();
+
+        } else {
+            updateNumLosses(1);
+
+            $("#outputMessage").html("Thanos has caused the 'Snap'!<br>Click anywhere to continue.");
+            $("#lightBox").css({
+                "animation-name"  : "shake",
+                "background-color": "var(--color-danger-red)"
+            });
+
+            this.displayLightBox(true);
+            
+            this.startNewGame();
+
+        }
+    }
+}
