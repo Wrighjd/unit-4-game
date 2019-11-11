@@ -38,3 +38,24 @@ const CrystalCollector = function() {
         displayTargetSum();
         displayCurrentSum();
     }
+
+    function displayCurrentPage() {
+        $(".page").css({"display": "none"});
+        $(`.page:nth-of-type(${currentPage + 1})`).css({"display": "block"});
+    }
+
+    function displayNumWins() {
+        $("#numWins").text(numWins);
+    }
+
+    function displayNumLosses() {
+        $("#numLosses").text(numLosses);
+    }
+
+    function displayTargetSum() {
+        $("#targetSum").text(targetSum);
+    }
+
+    function displayCurrentSum() {
+        $("#currentSum").text(currentSum);
+    }
