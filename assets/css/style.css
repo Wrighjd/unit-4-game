@@ -23,3 +23,15 @@ h1 {
     width: 80px;
     height: 100px;
 }
+
+.container {
+    width  : 640px;
+    margin : auto;
+    padding: 60px 0;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear  : both;
+}
