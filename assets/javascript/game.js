@@ -116,3 +116,10 @@ const CrystalCollector = function() {
         }
     }
 }
+
+let game;
+
+$(document).ready(function() {
+    game = new CrystalCollector();
+
+    game.startNewGame();
